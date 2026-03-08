@@ -155,7 +155,7 @@ class CustomEnv(BaseEnv):
     the code below all impact some part of `self.step` function
     """
 
-    def evaluate(self, obs: Any):
+    def evaluate(self):
         # this function is used primarily to determine success and failure of a task, both of which are optional. If a dictionary is returned
         # containing "success": bool array indicating if the env is in success state or not, that is used as the terminated variable returned by
         # self.step. Likewise if it contains "fail": bool array indicating the opposite (failure state or not) the same occurs. If both are given
@@ -198,8 +198,8 @@ class CustomEnv(BaseEnv):
         # state["goal_pos"] = add_your_non_sim_state_data_here
         return state
 
-    def set_state_dict(self, state):
+    def set_state_dict(self, state, env_idx: torch.Tensor = None):
         # this function complements get_state and sets any non simulation state related data correctly so the environment behaves
         # the exact same in terms of output rewards, observations, success etc. should you reset state to a given state and take the same actions
-        self.goal_pos = state["goal_pos"]
-        super().set_state_dict(state)
+        # self.goal_pos = state["goal_pos"]
+        super().set_state_dict(state, env_idx)

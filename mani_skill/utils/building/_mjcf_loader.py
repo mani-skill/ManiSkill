@@ -39,7 +39,6 @@ Notes:
 import math
 import os
 import re
-import xml.etree.ElementTree as ET
 from collections import defaultdict
 from copy import deepcopy
 from dataclasses import dataclass
@@ -47,6 +46,7 @@ from functools import reduce
 from typing import Any, Literal, Tuple, Union
 from xml.etree.ElementTree import Element
 
+import defusedxml.ElementTree as ET
 import numpy as np
 import sapien
 from sapien import ActorBuilder, Pose
