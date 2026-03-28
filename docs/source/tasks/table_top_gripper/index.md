@@ -99,7 +99,7 @@ Table of all tasks/environments in this category. Task column is the environment
 <tr class="row-odd">
 <td><p><a href="#plugcharger-v1">PlugCharger-v1</a></p></td>
 <td><div style='display:flex;gap:4px;align-items:center'><img style='min-width:min(50%, 100px);max-width:100px;height:auto' src='../../_static/env_thumbnails/PlugCharger-v1_rt_thumb_first.png' alt='PlugCharger-v1'> <img style='min-width:min(50%, 100px);max-width:100px;height:auto' src='../../_static/env_thumbnails/PlugCharger-v1_rt_thumb_last.png' alt='PlugCharger-v1'></div></td>
-<td><p>✅</p></td>
+<td><p>❌</p></td>
 <td><p>✅</p></td>
 <td><p>✅</p></td>
 <td><p>200</p></td>
@@ -422,7 +422,7 @@ and the sphere is initialized in [-0.1, -0.05] x [-0.1, 0.1]
 
 ## PlugCharger-v1
 
-![dense-reward][dense-reward-badge]
+![no-dense-reward][no-dense-reward-badge]
 ![sparse-reward][sparse-reward-badge]
 ![demos][demos-badge]
 :::{dropdown} Task Card
