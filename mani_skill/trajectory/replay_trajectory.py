@@ -276,7 +276,7 @@ def replay_cpu_sim(
                     trajectories[traj_id]["env_states"]
                 )
                 if ori_env is not None:
-                    ori_env.set_state_dict(ori_env_states[0])
+                    ori_env.unwrapped.set_state_dict(ori_env_states[0])
                 env.base_env.set_state_dict(ori_env_states[0])
                 ori_env_states = ori_env_states[1:]
                 if args.save_traj:

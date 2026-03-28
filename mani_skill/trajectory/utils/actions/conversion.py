@@ -94,8 +94,8 @@ def from_pd_joint_pos_to_ee(
     if pbar is not None:
         pbar.reset(total=n)
 
-    ori_controller: CombinedController = ori_env.agent.controller
-    controller: CombinedController = env.agent.controller
+    ori_controller: CombinedController = ori_env.unwrapped.agent.controller
+    controller: CombinedController = env.unwrapped.agent.controller
     assert (
         "arm" in ori_controller.controllers
     ), "Could not find the controller for the robot arm. This controller conversion tool requires there to be a key called 'arm' in the controller"
@@ -120,12 +120,12 @@ def from_pd_joint_pos_to_ee(
         if pbar is not None:
             pbar.update()
 
-        ori_action = common.to_tensor(ori_actions[t], device=env.device)
+        ori_action = common.to_tensor(ori_actions[t], device=env.unwrapped.device)
         ori_action_dict = common.to_tensor(
-            ori_controller.to_action_dict(ori_action), device=env.device
+            ori_controller.to_action_dict(ori_action), device=env.unwrapped.device
         )
         output_action_dict = common.to_tensor(
-            ori_action_dict.copy(), device=env.device
+            ori_action_dict.copy(), device=env.unwrapped.device
         )  # do not in-place modify
         ori_env.step(ori_action)
 
@@ -230,8 +230,8 @@ def from_pd_joint_pos(
     if pbar is not None:
         pbar.reset(total=n)
 
-    ori_controller: CombinedController = ori_env.agent.controller
-    controller: CombinedController = env.agent.controller
+    ori_controller: CombinedController = ori_env.unwrapped.agent.controller
+    controller: CombinedController = env.unwrapped.agent.controller
 
     info = {}
 
@@ -273,7 +273,7 @@ def from_pd_joint_pos(
             output_action_dict["arm"] = arm_action
 
             output_action = controller.from_action_dict(
-                common.to_tensor(output_action_dict, device=env.device)
+                common.to_tensor(output_action_dict, device=env.unwrapped.device)
             )
             _, _, _, _, info = env.step(output_action)
             if render:
@@ -298,8 +298,8 @@ def from_pd_joint_delta_pos(
     if pbar is not None:
         pbar.reset(total=n)
 
-    ori_controller: CombinedController = ori_env.agent.controller
-    controller: CombinedController = env.agent.controller
+    ori_controller: CombinedController = ori_env.unwrapped.agent.controller
+    controller: CombinedController = env.unwrapped.agent.controller
     ori_arm_controller: PDJointPosController = ori_controller.controllers["arm"]
 
     assert output_mode == "pd_joint_pos", output_mode
@@ -324,7 +324,7 @@ def from_pd_joint_delta_pos(
 
         output_action_dict["arm"] = arm_action
         output_action = controller.from_action_dict(
-            common.to_tensor(output_action_dict, device=env.device)
+            common.to_tensor(output_action_dict, device=env.unwrapped.device)
         )
         _, _, _, _, info = env.step(output_action)
 
