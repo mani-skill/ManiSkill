@@ -1,0 +1,13 @@
+{
+  "benchmark": "ManiSkill",
+  "task_name": "",
+  "seed": null,
+  "maniskill_version": "",
+  "simulator_backend": "",
+  "robot_type": "",
+  "policy_type": "",
+  "checkpoint_path": "",
+  "replay_command": "",
+  "output_artifact_directory": "",
+  "notes": ""
+}
