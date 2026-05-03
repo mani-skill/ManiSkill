@@ -32,7 +32,7 @@ class ManiSkillSB3VectorEnv(SB3VecEnv):
 
     def __init__(self, env: BaseEnv):
         super().__init__(
-            env.num_envs, env.single_observation_space, env.single_action_space
+            env.base_env.num_envs, env.base_env.single_observation_space, env.base_env.single_action_space
         )
         self._env = env
         self._last_seed = None
