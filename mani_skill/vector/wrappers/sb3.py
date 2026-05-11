@@ -31,10 +31,10 @@ class ManiSkillSB3VectorEnv(SB3VecEnv):
     """A wrapper for to make ManiSkill parallel simulation compatible with SB3 VecEnv and auto adds the monitor wrapper"""
 
     def __init__(self, env: BaseEnv):
-        super().__init__(
-            env.num_envs, env.single_observation_space, env.single_action_space
-        )
         self._env = env
+        super().__init__(
+            self.base_env.num_envs, self.base_env.single_observation_space, self.base_env.single_action_space
+        )
         self._last_seed = None
         self.t_start = time.time()
         self.episode_returns: torch.Tensor = torch.zeros(
