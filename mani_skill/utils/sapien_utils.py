@@ -12,6 +12,14 @@ import sapien.physx as physx
 import sapien.render
 import torch
 from sapien.utils import Viewer
+from sapien.utils.viewer.contact_window import ContactWindow
+from sapien.utils.viewer.control_window import ControlWindow
+from sapien.utils.viewer.entity_window import EntityWindow
+from sapien.utils.viewer.path_window import PathWindow
+from sapien.utils.viewer.render_window import RenderOptionsWindow
+from sapien.utils.viewer.scene_window import SceneWindow
+from sapien.utils.viewer.setting_window import SettingWindow
+from sapien.utils.viewer.transform_window import TransformWindow
 
 from mani_skill.render import SAPIEN_RENDER_SYSTEM
 from mani_skill.utils.geometry.rotation_conversions import matrix_to_quaternion
@@ -460,8 +468,19 @@ def create_viewer(viewer_camera_config: CameraConfig):
                     "ray_tracing_samples_per_pixel"
                 ]
             )
+
         viewer = Viewer(
-            resolutions=(viewer_camera_config.width, viewer_camera_config.height)
+            resolutions=(viewer_camera_config.width, viewer_camera_config.height),
+            plugins=[
+                PathWindow(),
+                ContactWindow(),
+                SettingWindow(),
+                TransformWindow(),
+                RenderOptionsWindow(),
+                ControlWindow(),
+                SceneWindow(),
+                EntityWindow(),
+            ],
         )
         if sys.platform == "darwin":  # macOS
             viewer.window.set_content_scale(1)
