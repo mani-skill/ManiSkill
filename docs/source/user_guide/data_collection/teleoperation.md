@@ -35,7 +35,8 @@ You can always press "h" to bring up a help menu describing the keyboard command
 ## Virtual Reality (VR) Systems
 
 We recommend checking out the following community built projects for VR based teleoperation tools for ManiSkill:
-- [https://github.com/liuyulinn/imvr](https://github.com/liuyulinn/imvr)
-- [https://github.com/fracapuano/maniskill-quest-teleop](https://github.com/fracapuano/maniskill-quest-teleop)
+
+- [ImVR: Immersive VR Teleoperation System for General Purpose Manipulation](https://github.com/liuyulinn/imvr) - Local connection/ALVR based teleoperation.
+- [Maniskill Quest Teleop](https://github.com/fracapuano/maniskill-quest-teleop) - WebXR based teleoperation.
 
 At the moment there is no plan to directly integrate VR teleop tools into maniskill due to the amount of complexity and additional dependencies for a single feature.
