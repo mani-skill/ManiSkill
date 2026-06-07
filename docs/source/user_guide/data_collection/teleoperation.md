@@ -32,10 +32,11 @@ To stop data collection press "q" to quit. This will then save the trajectory da
 You can always press "h" to bring up a help menu describing the keyboard commands.
 
 
-## Meta Quest 3
+## Virtual Reality (VR) Systems
 
-Currently WIP
+We recommend checking out the following community built projects for VR based teleoperation tools for ManiSkill:
 
-## Apple Vision Pro 
+- [ImVR: Immersive VR Teleoperation System for General Purpose Manipulation](https://github.com/liuyulinn/imvr) - Local connection/ALVR based teleoperation.
+- [Maniskill Quest Teleop](https://github.com/fracapuano/maniskill-quest-teleop) - WebXR based teleoperation.
 
-Currently WIP
+At the moment there is no plan to directly integrate VR teleop tools into maniskill due to the amount of complexity and additional dependencies for a single feature.
