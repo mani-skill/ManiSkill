@@ -53,6 +53,7 @@ wrappers/index
 :maxdepth: 2
 :caption: Additional Resources
 
+additional_resources/community_projects
 additional_resources/performance_benchmarking
 additional_resources/citation
 ```
