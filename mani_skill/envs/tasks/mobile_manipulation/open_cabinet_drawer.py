@@ -48,7 +48,7 @@ class OpenCabinetDrawerEnv(BaseEnv):
     - 3D goal position centered at the center of mass of the handle mesh on the drawer to open (also visualized in human renders with a sphere).
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/OpenCabinetDrawer-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/OpenCabinetDrawer-v1_rt.mp4"
 
     SUPPORTED_ROBOTS = ["fetch"]
     agent: Union[Fetch]

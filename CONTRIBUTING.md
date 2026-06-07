@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to ManiSkill! To get started, follow the setup and installation instructions below.
 
-To start contributing, raise an issue at https://github.com/haosulab/ManiSkill/issues describing what your proposed changes/contributions or comment on an existing issue. Once one of the maintainers gives a thumbs up, you can make a pull request, and our team will review it.
+To start contributing, raise an issue at https://github.com/mani-skill/ManiSkill/issues describing what your proposed changes/contributions or comment on an existing issue. Once one of the maintainers gives a thumbs up, you can make a pull request, and our team will review it.
 
 ## Setup and Installation
 
@@ -10,7 +10,7 @@ We recommend using Python 3.11 to build and develop on ManiSkill, although we cu
 
 ```
 # using uv
-git clone https://github.com/haosulab/ManiSkill.git
+git clone https://github.com/mani-skill/ManiSkill.git
 cd ManiSkill
 uv venv -p python3.11
 uv pip install -e .[dev] # install ManiSkill locally with testing dependencies
@@ -19,7 +19,7 @@ uv pip install -e .[dev] # install ManiSkill locally with testing dependencies
 ```
 # or using conda/mamba
 conda create -n "ms_dev" "python==3.11"
-git clone https://github.com/haosulab/ManiSkill.git
+git clone https://github.com/mani-skill/ManiSkill.git
 cd ManiSkill
 pip install -e .[dev] # install ManiSkill locally with testing dependencies
 ```

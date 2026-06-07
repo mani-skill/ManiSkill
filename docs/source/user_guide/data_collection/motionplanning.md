@@ -1,12 +1,12 @@
 # Motion Planning
 
-ManiSkill provides simple tools to use motion planning to generate robot trajectories, primarily via the open-source [mplib](https://github.com/haosulab/MPlib) library. If you install ManiSkill, mplib will come installed already so no extra installation is necessary.
+ManiSkill provides simple tools to use motion planning to generate robot trajectories, primarily via the open-source [mplib](https://github.com/mani-skill/MPlib) library. If you install ManiSkill, mplib will come installed already so no extra installation is necessary.
 
 For an in-depth tutorial on how to use more advanced features of mplib check out their documentation here: https://motion-planning-lib.readthedocs.io/latest/. Otherwise this section will cover some example code you can use and modify to generate motion planned demonstrations. The example code here is written for the Panda arm but can be modified to work for other robots.
 
 ## Motion Planning with Panda Arm
 
-We provide some built-in motion planning solutions for some tasks using the Panda arm at https://github.com/haosulab/ManiSkill/tree/main/mani_skill/examples/motionplanning/panda. You can run a quick demo below, which will save trajectory data as .h5 files to `demos/motionplanning/<env_id>` and optionally save videos and/or visualize with a GUI.
+We provide some built-in motion planning solutions for some tasks using the Panda arm at https://github.com/mani-skill/ManiSkill/tree/main/mani_skill/examples/motionplanning/panda. You can run a quick demo below, which will save trajectory data as .h5 files to `demos/motionplanning/<env_id>` and optionally save videos and/or visualize with a GUI.
 
 ```bash
 python -m mani_skill.examples.motionplanning.panda.run -e "PickCube-v1" --save-video # runs headless and only saves video
@@ -17,7 +17,7 @@ python -m mani_skill.examples.motionplanning.panda.run -h # open up a help menu 
 Example below shows what it looks like with the GUI:
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/motionplanning-stackcube.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/motionplanning-stackcube.mp4" type="video/mp4">
 </video>
 
 The solutions to these tasks usually involve decomposing the task down to a sequence of simple pick, place, and movements. The example code provided controls the panda arm's end-effector to move to any pose in its workspace as well as grab/release.

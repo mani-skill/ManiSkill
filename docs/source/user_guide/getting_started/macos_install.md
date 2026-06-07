@@ -73,4 +73,4 @@ Some environments are quite complex and thus rendering intensive. Macs with weak
 
 Moreover while MacOS is now supported, it is still strongly recommended to do any rendering intensive workflows (such as visual data generation / RL training) on a machine with a cuda enabled GPU (even Google Colab will likely run much faster). The best use-case for MacOS usage is primarily for inference, local debugging, and development (of e.g. custom tasks/robots).
 
-If you have any issues please let us know by raising a [Github Issue](https://github.com/haosulab/ManiSkill/issues) / open a [Github Discussion](https://github.com/haosulab/ManiSkill/discussions).
+If you have any issues please let us know by raising a [Github Issue](https://github.com/mani-skill/ManiSkill/issues) / open a [Github Discussion](https://github.com/mani-skill/ManiSkill/discussions).

@@ -79,7 +79,7 @@ Control the AnymalC robot to reach a target location in front of it. Note the cu
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/AnymalC-Reach-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/AnymalC-Reach-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/AnymalC-Reach-v1_rt.mp4" type="video/mp4">
 </video>
 </div>
 
@@ -103,6 +103,6 @@ Control the AnymalC robot to spin around in place as fast as possible and is rew
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/AnymalC-Spin-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/AnymalC-Spin-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/AnymalC-Spin-v1_rt.mp4" type="video/mp4">
 </video>
 </div>

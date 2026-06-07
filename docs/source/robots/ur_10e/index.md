@@ -4,7 +4,7 @@
 
 Robot UID: `ur_10e`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/ur_e/ur_10e.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/ur_e/ur_10e.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/ur_e/ur_10e.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/ur_e/ur_10e.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

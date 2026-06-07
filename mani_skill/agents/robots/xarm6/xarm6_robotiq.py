@@ -232,7 +232,9 @@ class XArm6Robotiq(BaseAgent):
 
         # Use a mimic controller config to define one action to control both fingers
         mimic_config = dict(
-            left_outer_knuckle_joint=dict(joint="right_outer_knuckle_joint", multiplier=1.0, offset=0.0),
+            left_outer_knuckle_joint=dict(
+                joint="right_outer_knuckle_joint", multiplier=1.0, offset=0.0
+            ),
         )
         finger_mimic_pd_joint_pos = PDJointPosMimicControllerConfig(
             finger_joint_names,
@@ -327,7 +329,7 @@ class XArm6Robotiq(BaseAgent):
         pad = outer_finger.get_child_link()
         lif = inner_knuckle.get_child_link()
 
-        # the next 4 magic arrays come from https://github.com/haosulab/cvpr-tutorial-2022/blob/master/debug/robotiq.py which was
+        # the next 4 magic arrays come from https://github.com/mani-skill/cvpr-tutorial-2022/blob/master/debug/robotiq.py which was
         # used to precompute these poses for drive creation
         p_f_right = [-1.6048949e-08, 3.7600022e-02, 4.3000020e-02]
         p_p_right = [1.3578170e-09, -1.7901104e-02, 6.5159947e-03]

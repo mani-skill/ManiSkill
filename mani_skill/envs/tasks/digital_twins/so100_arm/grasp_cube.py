@@ -67,7 +67,7 @@ class SO100GraspCubeEnv(BaseDigitalTwinEnv):
     - the cube is lifted, grasped, and the robot returns to a rest pose above the surface of the table
     """
 
-    # _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PickCube-v1_rt.mp4"
+    # _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/PickCube-v1_rt.mp4"
     SUPPORTED_ROBOTS = ["so100"]
     SUPPORTED_OBS_MODES = ["none", "state", "state_dict", "rgb+segmentation"]
     agent: SO100

@@ -35,7 +35,7 @@ authors:
 title: "ManiSkill"
 version: 0.3.0
 date-released: 2022-08-15
-url: "https://github.com/haosulab/ManiSkill"
+url: "https://github.com/mani-skill/ManiSkill"
 preferred-citation:
   type: conference-paper
   title: "ManiSkill: A Unified Benchmark for Generalizable Manipulation Skills"

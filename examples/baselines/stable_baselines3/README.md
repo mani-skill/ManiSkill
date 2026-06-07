@@ -1,6 +1,6 @@
 # Stable Baselines 3
 
-The example.py code shows a very simple example of how to use Stable Baselines 3 with ManiSkill 3 via a simple wrapper. These are not tuned as much compared to the [recommended PPO baseline code](https://github.com/haosulab/ManiSkill/tree/main/examples/baselines/ppo) so we cannot guarantee good performance from using Stable Baselines 3. Moreover, currently Stable Baselines 3 is not optimized for GPU vectorized environments, so it will train a bit slower.
+The example.py code shows a very simple example of how to use Stable Baselines 3 with ManiSkill 3 via a simple wrapper. These are not tuned as much compared to the [recommended PPO baseline code](https://github.com/mani-skill/ManiSkill/tree/main/examples/baselines/ppo) so we cannot guarantee good performance from using Stable Baselines 3. Moreover, currently Stable Baselines 3 is not optimized for GPU vectorized environments, so it will train a bit slower.
 
 If you use Stable Baselines 3 please cite the following 
 

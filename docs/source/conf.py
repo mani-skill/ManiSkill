@@ -48,7 +48,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/haosulab/ManiSkill",
+            "url": "https://github.com/mani-skill/ManiSkill",
             "icon": "fa-brands fa-github",
         },
         {
@@ -58,7 +58,7 @@ html_theme_options = {
         }
     ],
     "external_links": [
-        {"name": "Changelog", "url": "https://github.com/haosulab/ManiSkill/releases"},
+        {"name": "Changelog", "url": "https://github.com/mani-skill/ManiSkill/releases"},
     ],
     "logo": {
         "image_dark": "_static/logo_white.svg",
@@ -72,7 +72,7 @@ html_theme_options = {
 }
 html_context = {
     "display_github": True,
-    "github_user": "haosulab",
+    "github_user": "mani-skill",
     "github_repo": "ManiSkill",
     "github_version": "main",
     "conf_py_path": "/source/",

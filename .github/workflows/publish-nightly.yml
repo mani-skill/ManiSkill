@@ -15,7 +15,7 @@ on:
 jobs:
   build-nightly:
     # Don't run on forked repos.
-    if: github.repository_owner == 'haosulab'
+    if: github.repository_owner == 'mani-skill'
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
@@ -38,7 +38,7 @@ jobs:
           path: dist/
           
   upload-nightly-wheel:
-    if: github.repository_owner == 'haosulab'
+    if: github.repository_owner == 'mani-skill'
     needs: build-nightly
     runs-on: ubuntu-22.04
     steps:

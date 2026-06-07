@@ -177,7 +177,7 @@ class AnymalCReachEnv(QuadrupedReachEnv):
     - The 2D goal position in the XY-plane
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/AnymalC-Reach-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skillll/ManiSkill/raw/main/figures/environment_demos/AnymalC-Reach-v1_rt.mp4"
     _UNDESIRED_CONTACT_LINK_NAMES = ["LF_KFE", "RF_KFE", "LH_KFE", "RH_KFE"]
 
     def __init__(self, *args, robot_uids="anymal_c", **kwargs):

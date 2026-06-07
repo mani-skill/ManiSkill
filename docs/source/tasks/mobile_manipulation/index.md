@@ -81,6 +81,6 @@ Use the Fetch mobile manipulation robot to move towards a target cabinet and ope
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/OpenCabinetDrawer-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/OpenCabinetDrawer-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/OpenCabinetDrawer-v1_rt.mp4" type="video/mp4">
 </video>
 </div>

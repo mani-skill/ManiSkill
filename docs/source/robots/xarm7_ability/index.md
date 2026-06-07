@@ -4,7 +4,7 @@
 
 Robot UID: `xarm7_ability`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/xarm/xarm7_ability.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/xarm/xarm7_ability.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/xarm/xarm7_ability.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/xarm/xarm7_ability.py)
 
 Quality: A (Values are realistic, but have not been properly identified)
 

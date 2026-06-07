@@ -4,7 +4,7 @@
 
 Robot UID: `dclaw`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/dclaw/dclaw.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/dclaw/dclaw.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/dclaw/dclaw.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/dclaw/dclaw.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

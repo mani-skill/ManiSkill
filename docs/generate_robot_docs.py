@@ -103,7 +103,7 @@ Robots that are cannot be stably simulated are not included in ManiSkill at all.
         if agent.uid in DATA_GROUPS:
             requires_downloading_assets = True
         urdf_path = agent.urdf_path
-        agent_class_code_link = f"https://github.com/haosulab/ManiSkill/blob/main/{agent.__module__.replace('.', '/') + '.py'}"
+        agent_class_code_link = f"https://github.com/mani-skill/ManiSkill/blob/main/{agent.__module__.replace('.', '/') + '.py'}"
         if requires_downloading_assets:
             # note (stao): asset download location might move away from github to another place in the future
             pass

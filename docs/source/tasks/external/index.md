@@ -91,6 +91,6 @@ These tasks are split into 4 subtasks: Pick Place, Open, and Close.
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/ManiSkill-HAB_rt_poster.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/ManiSkill-HAB_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/ManiSkill-HAB_rt.mp4" type="video/mp4">
 </video>
 </div>

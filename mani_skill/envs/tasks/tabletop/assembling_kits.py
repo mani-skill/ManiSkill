@@ -36,7 +36,7 @@ class AssemblingKitsEnv(BaseEnv):
     - the misplaced shape is inserted completely into the correct slot
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/AssemblingKits-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skillll/ManiSkill/raw/main/figures/environment_demos/AssemblingKits-v1_rt.mp4"
 
     SUPPORTED_REWARD_MODES = ["sparse", "none"]
     SUPPORTED_ROBOTS = ["panda_wristcam"]

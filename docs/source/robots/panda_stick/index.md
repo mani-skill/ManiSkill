@@ -4,7 +4,7 @@
 
 Robot UID: `panda_stick`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/panda/panda_stick.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/panda/panda_stick.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/panda/panda_stick.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/panda/panda_stick.py)
 
 Quality: A (Values are realistic, but have not been properly identified)
 
