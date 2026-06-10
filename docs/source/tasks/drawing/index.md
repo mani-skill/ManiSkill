@@ -75,7 +75,7 @@ None
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/TableTopFreeDraw-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/TableTopFreeDraw-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/TableTopFreeDraw-v1_rt.mp4" type="video/mp4">
 </video>
 </div>
 
@@ -100,7 +100,7 @@ Instantiates a table with a white canvas on it and a svg path specified with an 
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/DrawSVG-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/DrawSVG-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/DrawSVG-v1_rt.mp4" type="video/mp4">
 </video>
 </div>
 
@@ -126,6 +126,6 @@ Instantiates a table with a white canvas on it and a goal triangle with an outli
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/DrawTriangle-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/DrawTriangle-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/DrawTriangle-v1_rt.mp4" type="video/mp4">
 </video>
 </div>

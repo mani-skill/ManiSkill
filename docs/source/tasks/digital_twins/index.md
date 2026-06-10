@@ -25,23 +25,23 @@ If you use the BridgeData v2 digital twins please cite the following in addition
 ### PutCarrotOnPlateInScene-v1
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/PutCarrotOnPlateInScene-v1.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/PutCarrotOnPlateInScene-v1.mp4" type="video/mp4">
 </video>
 
 ### PutSpoonOnTableClothInScene-v1
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/PutSpoonOnTableClothInScene-v1.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/PutSpoonOnTableClothInScene-v1.mp4" type="video/mp4">
 </video>
 
 ### StackGreenCubeOnYellowCubeBakedTexInScene-v1
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/StackGreenCubeOnYellowCubeBakedTexInScene-v1.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/StackGreenCubeOnYellowCubeBakedTexInScene-v1.mp4" type="video/mp4">
 </video>
 
 ### PutEggplantInBasketScene-v1
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/PutEggplantInBasketScene-v1.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/digital_twins/bridge_data_v2/PutEggplantInBasketScene-v1.mp4" type="video/mp4">
 </video>

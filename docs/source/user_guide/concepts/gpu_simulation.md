@@ -64,11 +64,11 @@ ManiSkill aims to support both CPU and GPU parallelization schemes for paralleli
 
 ### Managed Objects and Views
 
-ManiSkill can be seen as a pythonic interface over SAPIEN, the underlying system. SAPIEN seeks to be minimal, flexible, and fast. ManiSkill is more managed and provides tools to use SAPIEN easily for various workflows particularly in machine learning. A common example of this is that many objects in SAPIEN have equivalents in ManiSkill that simply wrap around the SAPIEN objects, most of which can be found in the [`mani_skill.utils.structs` module](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/utils/structs)
+ManiSkill can be seen as a pythonic interface over SAPIEN, the underlying system. SAPIEN seeks to be minimal, flexible, and fast. ManiSkill is more managed and provides tools to use SAPIEN easily for various workflows particularly in machine learning. A common example of this is that many objects in SAPIEN have equivalents in ManiSkill that simply wrap around the SAPIEN objects, most of which can be found in the [`mani_skill.utils.structs` module](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/utils/structs)
 
-The [`Actor`](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/utils/structs/actor.py) class for example wraps around `sapien.Entity` objects that correspond to actual objects spawned in the simulator in each sub-scene, and allows easy access to otherwise highly compact/optimized GPU buffers that SAPIEN exposes to then fetch batched data like pose, velocities, pairwise contact forces etc.
+The [`Actor`](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/utils/structs/actor.py) class for example wraps around `sapien.Entity` objects that correspond to actual objects spawned in the simulator in each sub-scene, and allows easy access to otherwise highly compact/optimized GPU buffers that SAPIEN exposes to then fetch batched data like pose, velocities, pairwise contact forces etc.
 
-Similarly, the [`Pose`](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/utils/structs/pose.py) class itself is a wrapper around the common `sapien.Pose` object and is effectively a batched version of that.
+Similarly, the [`Pose`](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/utils/structs/pose.py) class itself is a wrapper around the common `sapien.Pose` object and is effectively a batched version of that.
 
 Another way to view these wrappers is to see that these wrappers are alternative **views** of otherwise the same data the raw GPU buffers expose. By understanding this perspective, it becomes easier to think about building tasks where you are simulating very different sub-scenes with different articulations that have different degrees of freedoms and different numbers of objects.
 

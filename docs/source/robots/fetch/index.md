@@ -4,7 +4,7 @@
 
 Robot UID: `fetch`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/fetch/fetch.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/fetch/fetch.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/fetch/fetch.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/fetch/fetch.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

@@ -4,7 +4,7 @@
 
 Robot UID: `xarm6_robotiq_wristcam`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/xarm6/xarm6_robotiq.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/xarm6/xarm6_robotiq.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/xarm6/xarm6_robotiq.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/xarm6/xarm6_robotiq.py)
 
 Quality: A (Values are realistic, but have not been properly identified)
 

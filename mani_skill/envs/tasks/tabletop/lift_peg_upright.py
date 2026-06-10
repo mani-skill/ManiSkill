@@ -31,7 +31,7 @@ class LiftPegUprightEnv(BaseEnv):
     - the absolute value of the peg's y euler angle is within 0.08 of $\pi$/2 and the z position of the peg is within 0.005 of its half-length (0.12).
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/LiftPegUpright-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skillll/ManiSkill/raw/main/figures/environment_demos/LiftPegUpright-v1_rt.mp4"
     SUPPORTED_ROBOTS = ["panda", "fetch"]
     agent: Union[Panda, Fetch]
 

@@ -33,7 +33,7 @@ capabilities can be simulated and trained properly. Hence there is extra code fo
 @register_env("PickCube-v1", max_episode_steps=50)
 class PickCubeEnv(BaseEnv):
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PickCube-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/PickCube-v1_rt.mp4"
     SUPPORTED_ROBOTS = [
         "panda",
         "fetch",
@@ -196,7 +196,7 @@ PickCubeEnv.__doc__ = PICK_CUBE_DOC_STRING.format(robot_id="Panda")
 
 @register_env("PickCubeSO100-v1", max_episode_steps=50)
 class PickCubeSO100Env(PickCubeEnv):
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PickCubeSO100-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/PickCubeSO100-v1_rt.mp4"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, robot_uids="so100", **kwargs)
@@ -207,7 +207,7 @@ PickCubeSO100Env.__doc__ = PICK_CUBE_DOC_STRING.format(robot_id="SO100")
 
 @register_env("PickCubeWidowXAI-v1", max_episode_steps=50)
 class PickCubeWidowXAIEnv(PickCubeEnv):
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PickCubeWidowXAI-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/PickCubeWidowXAI-v1_rt.mp4"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, robot_uids="widowxai", **kwargs)

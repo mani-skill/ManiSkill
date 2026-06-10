@@ -35,7 +35,7 @@ class StackPyramidEnv(BaseEnv):
     - the blue cube is on top of both the red and green cube (to within half of the cube size)
     - none of the red, green, blue cubes are grasped by the robot (robot must let go of the cubes)
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/StackPyramid-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/StackPyramid-v1_rt.mp4"
 
     """
 

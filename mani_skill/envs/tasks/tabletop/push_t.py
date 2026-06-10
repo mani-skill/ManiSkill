@@ -80,7 +80,7 @@ class PushTEnv(BaseEnv):
     - The T block covers 90% of the 2D goal T's area
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PushT-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/PushT-v1_rt.mp4"
     SUPPORTED_ROBOTS = ["panda_stick"]
     agent: PandaStick
 

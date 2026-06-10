@@ -31,7 +31,7 @@ class PullCubeEnv(BaseEnv):
     - the cube's xy position is within goal_radius (default 0.1) of the target's xy position by euclidean distance.
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PullCube-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/PullCube-v1_rt.mp4"
     SUPPORTED_ROBOTS = ["panda", "fetch"]
     agent: Union[Panda, Fetch]
     goal_radius = 0.1

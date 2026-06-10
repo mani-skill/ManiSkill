@@ -8,7 +8,7 @@ ManiSkill provides two ways to load actors, loading directly from existing simul
 
 ### Loading from Existing Datasets
 
-ManiSkill supports easily loading assets from existing datasets such as the YCB dataset. In the beta release this is the only asset database available, more will be provided once we finish integrating a 3D asset database system.
+ManiSkill supports easily loading assets from existing datasets such as the YCB dataset.
 
 ```python
 import sapien
@@ -40,8 +40,7 @@ There are several ways to load articulations as detailed below as well as some l
 
 ### Loading from Existing Datasets
 
-Like actors, ManiSkill supports easily loading articulated assets from existing datasets such as the Partnet Mobility dataset. In the beta release this is the only asset database available, more will be provided once we finish integrating a 3D asset database system.
-
+Like actors, ManiSkill supports easily loading articulated assets from existing datasets such as the Partnet Mobility dataset.
 ```python
 from mani_skill.utils.building import articulations
 def _load_scene(self, options):

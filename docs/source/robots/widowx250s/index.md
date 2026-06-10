@@ -4,7 +4,7 @@
 
 Robot UID: `widowx250s`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/widowx/widowx.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/widowx/widowx.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/widowx/widowx.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/widowx/widowx.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

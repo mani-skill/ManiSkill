@@ -31,7 +31,7 @@ class RollBallEnv(BaseEnv):
     - The ball's xy position is within goal_radius (default 0.1) of the target's xy position by euclidean distance.
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/RollBall-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/RollBall-v1_rt.mp4"
     SUPPORTED_ROBOTS = ["panda"]
 
     agent: Panda

@@ -4,7 +4,7 @@
 
 Robot UID: `widowxai_wristcam`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/widowxai/widowxai_wristcam.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/widowxai/widowxai_wristcam.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/widowxai/widowxai_wristcam.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/widowxai/widowxai_wristcam.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

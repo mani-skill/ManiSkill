@@ -6,7 +6,7 @@ This page covers nearly every feature useful for task building in ManiSkill. If 
 
 ### Pair-wise Contact Forces
 
-You may notice that in some tasks like [PickCube-v1](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/envs/tasks/pikc_cube.py) we call a function `self.agent.is_grasping(...)`. In ManiSkill, we leverage the pairwise impulses/forces API of SAPIEN to compute the forces between two objects. In the case of robots with two-finger grippers we check if both fingers are contacting a queried object. This is particularly useful for building better reward functions for faster RL. 
+You may notice that in some tasks like [PickCube-v1](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/envs/tasks/pikc_cube.py) we call a function `self.agent.is_grasping(...)`. In ManiSkill, we leverage the pairwise impulses/forces API of SAPIEN to compute the forces between two objects. In the case of robots with two-finger grippers we check if both fingers are contacting a queried object. This is particularly useful for building better reward functions for faster RL. 
 
 The API for querying pair-wise contact forces is unified between the GPU and CPU and is accessible via the `self.scene` object in your environment, accessible as so given a pair of actors/links of type `Actor | Link` to query via the ManiSkillScene object.
 
@@ -22,7 +22,7 @@ At the moment contacts work a bit different compared to CPU and GPU internally a
 On the GPU, one must create contact queries objects ahead of time and for performance reasons these are cached. Creating contact queries pauses all GPU computations similar to changing object poses/states. In ManiSkill this handled for users and it automatically creates queries if the queried contact forces are between objects that have not been queried before.
 :::
 
-For significantly more advanced/optimized usage of the contact forces API using the SAPIEN API directly instead of ManiSkill you can look at how [get_pairwise_contact_forces is implemented on GitHub](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/envs/scene.py#L505-L539)
+For significantly more advanced/optimized usage of the contact forces API using the SAPIEN API directly instead of ManiSkill you can look at how [get_pairwise_contact_forces is implemented on GitHub](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/envs/scene.py#L505-L539)
 
 ### Net Contact forces
 

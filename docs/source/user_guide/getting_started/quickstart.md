@@ -72,7 +72,7 @@ python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulatio
 ```
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/fetch_random_action_replica_cad_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/fetch_random_action_replica_cad_rt.mp4" type="video/mp4">
 </video> -->
 
 You will also notice that all data returned is a batched torch tensor. To reduce extra code handling numpy vs torch, cpu vs gpu sim, everything in ManiSkill defaults to serving/using batched torch tensors of all data. To change the environment to serve numpy, unbatched data simply do the following
@@ -141,7 +141,7 @@ python -m mani_skill.examples.benchmarking.gpu_sim --num-envs=64 --save-video
 which will look something like this
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/mani_skill_gpu_sim-PickCube-v1-num_envs=16-obs_mode=state-render_mode=sensors.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/mani_skill_gpu_sim-PickCube-v1-num_envs=16-obs_mode=state-render_mode=sensors.mp4" type="video/mp4">
 </video>
 
 ### Parallel Rendering in one Scene

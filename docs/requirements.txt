@@ -1,4 +1,4 @@
-sphinx==6.2.1
+sphinx==8.2.3
 sphinx-autobuild
 pydata_sphinx_theme
 # For spelling

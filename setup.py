@@ -7,7 +7,7 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 # update this version when a new official pypi release is made
-__version__ = "3.0.0b21"
+__version__ = "3.0.1"
 
 
 def get_package_version():
@@ -30,7 +30,7 @@ def get_dependencies():
         "numpy>=1.22",
         "scipy",
         "dacite",
-        "gymnasium==0.29.1",
+        "gymnasium>=0.29.1",
         "h5py",
         "pyyaml",
         "tqdm",
@@ -41,14 +41,15 @@ def get_dependencies():
         "imageio",
         "imageio[ffmpeg]",
         "mplib==0.1.1;platform_system=='Linux'",
-        "fast_kinematics==0.2.2;platform_system=='Linux'",
         "IPython",
         "pytorch_kinematics==0.7.6",
-        "pynvml",  # gpu monitoring
+        "defusedxml",
+        "nvidia-ml-py",  # gpu monitoring
         "tyro>=0.8.5",  # nice, typed, command line arg parser
         "huggingface_hub",  # we use HF to version control some assets/datasets more easily
-        "sapien>=3.0.0;platform_system=='Linux'",
+        "sapien>=3.0.3;platform_system=='Linux'",
         "sapien>=3.0.0.b1;platform_system=='Windows'",
+        "sapien>=3.0.2;platform_system=='Darwin'",
     ]
     # NOTE (stao): until sapien is uploaded to pypi with mac support, users need to install manually below as so
     # f"sapien @ https://github.com/haosulab/SAPIEN/releases/download/nightly/sapien-3.0.0.dev20250303+291f6a77-{python_version}-{python_version}-macosx_12_0_universal2.whl;platform_system=='Darwin'"
@@ -109,13 +110,13 @@ def main(argv):
                 "build",
                 "twine",
                 "stable_baselines3",
-                "pynvml",
+                "nvidia-ml-py",
                 "pytest-xdist[psutil]",
                 "pytest-forked",
             ],
             "docs": [
                 # Note that currently sphinx 7 does not work, so we must use v6.2.1. See https://github.com/kivy/kivy/issues/8230 which tracks this issue. Once fixed we can use a later version
-                "sphinx==6.2.1",
+                "sphinx==8.2.3",
                 "sphinx-autobuild",
                 "pydata_sphinx_theme",
                 # For spelling

@@ -4,7 +4,7 @@
 
 Robot UID: `allegro_hand_right_touch`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/allegro_hand/allegro_touch.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/allegro_hand/allegro_touch.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/allegro_hand/allegro_touch.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/allegro_hand/allegro_touch.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

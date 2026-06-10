@@ -1,9 +1,7 @@
 # Roadmap
 
-We are constantly working to improve ManiSkill in all aspects, from simulation/rendering speed to usability. Below is a brief list of planned upcoming features that will come to ManiSkill in the future
+The next roadmap for ManiSkill is under construction. We have some exciting new developments planned and will announce them when ready! Some that have been largely confirmed so far are
 
-- More offline RL Baselines (Algorithms like IQL, CQL, etc.)
-- A new, fast and accurate soft body simulator
-- Simple beautification tools to make high quality renders/recordings of trajectories in simulation
-- Object database of high quality, simulation ready assets (rigid-body, soft-body, articulations) for use in your tasks
-- More sensor types like Lidar
+- Improved asset management and reducing package bloat (e.g. we have too many assets in this package, and referencing them can be painful sometimes)
+- Switching our physx backend out with Newton/Mujoco Warp
+- Cleaning out some APIs that were rushed during ManiSkill3 development

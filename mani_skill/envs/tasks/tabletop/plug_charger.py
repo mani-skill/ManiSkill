@@ -32,7 +32,7 @@ class PlugChargerEnv(BaseEnv):
     - The charger is inserted into the receptacle
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PlugCharger-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/PlugCharger-v1_rt.mp4"
 
     _base_size = [2e-2, 1.5e-2, 1.2e-2]  # charger base half size
     _peg_size = [8e-3, 0.75e-3, 3.2e-3]  # charger peg half size

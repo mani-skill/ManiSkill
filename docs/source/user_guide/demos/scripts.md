@@ -29,7 +29,7 @@ python -m mani_skill.examples.demo_random_action -e "ReplicaCAD_SceneManipulatio
 ```
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/fetch_random_action_replica_cad_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/fetch_random_action_replica_cad_rt.mp4" type="video/mp4">
 </video>
 
 Tasks with multiple robots
@@ -95,7 +95,7 @@ python -m mani_skill.examples.benchmarking.gpu_sim -e "PickCube-v1" -n 64 \
 it should run quite fast! (3000+ fps on a 4090, you can increase the number envs for higher FPS). You can change `--render-mode="rgb_array"` to render from higher quality cameras.
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/mani_skill_gpu_sim-PickCube-v1-num_envs=16-obs_mode=state-render_mode=sensors.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/mani_skill_gpu_sim-PickCube-v1-num_envs=16-obs_mode=state-render_mode=sensors.mp4" type="video/mp4">
 </video>
 
 
@@ -109,7 +109,7 @@ python -m mani_skill.examples.benchmarking.gpu_sim -e "OpenCabinetDrawer-v1" -n 
 which shows two tasks that have different objects and articulations in every parallel environment. Below is an example for the OpenCabinetDrawer task.
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/mani_skill_gpu_sim-OpenCabinetDrawer-v1-num_envs=16-obs_mode=state-render_mode=sensors.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/mani_skill_gpu_sim-OpenCabinetDrawer-v1-num_envs=16-obs_mode=state-render_mode=sensors.mp4" type="video/mp4">
 </video>
 
 
@@ -130,7 +130,7 @@ python -m mani_skill.examples.teleoperation.interactive_panda -e "StackCube-v1"
 See [main page](../data_collection/teleoperation.md#clickdrag-system) for more details about how to use this tool (for demo and data collection). The video below shows the system running.
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/teleop-stackcube-demo.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/teleop-stackcube-demo.mp4" type="video/mp4">
 </video>
 
 ## Motion Planning Solutions
@@ -146,7 +146,7 @@ python -m mani_skill.examples.motionplanning.panda.run -h # open up a help menu 
 Example below shows what it looks like with the GUI:
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/motionplanning-stackcube.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/motionplanning-stackcube.mp4" type="video/mp4">
 </video>
 
 For more details check out the [motion planning page](../data_collection/motionplanning.md)
@@ -204,7 +204,7 @@ python -m mani_skill.examples.demo_reset_distribution -e "PegInsertionSide-v1" -
 ```
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/PegInsertionSide-v1_reset_distribution.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/PegInsertionSide-v1_reset_distribution.mp4" type="video/mp4">
 </video>
 
 ## Visualize Any Robot

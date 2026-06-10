@@ -4,7 +4,7 @@
 
 Robot UID: `floating_panda_gripper`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/floating_panda_gripper/floating_panda_gripper.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/floating_panda_gripper/floating_panda_gripper.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/floating_panda_gripper/floating_panda_gripper.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/floating_panda_gripper/floating_panda_gripper.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

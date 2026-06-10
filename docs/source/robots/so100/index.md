@@ -4,7 +4,7 @@
 
 Robot UID: `so100`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/so100/so_100.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/so100/so_100.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/so100/so_100.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/so100/so_100.py)
 
 Quality: A (Values are realistic, but have not been properly identified)
 

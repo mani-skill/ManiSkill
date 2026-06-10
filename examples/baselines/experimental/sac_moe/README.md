@@ -6,8 +6,6 @@ This baseline was contributed by [@XuGW-Kevin](https://github.com/XuGW-Kevin), [
 
 Currently, two enhancements have been integrated into the sac_moe.py and sac_moe_rgbd.py files: the [Mixture-of-Expert (MoE) Network](https://arxiv.org/abs/2402.08609) and the [Blended Exploration and Exploitation (BEE) Operator](https://arxiv.org/abs/2306.02865). More experimental features can be added in the future.
 
-Note that ManiSkill is still in beta, so we have not finalized training scripts for every pre-built task (some of which are simply too hard to solve with RL anyway). We will further organize these scripts and results in a more organized manner in the future.
-
 ## State Based RL
 
 Below is a sample of various commands you can run to train a state-based policy to solve various tasks with SAC MoE. Note that control modes can be changed and can be important for improving sample efficiency.

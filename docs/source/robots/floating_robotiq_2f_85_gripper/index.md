@@ -4,7 +4,7 @@
 
 Robot UID: `floating_robotiq_2f_85_gripper`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/floating_robotiq_2f_85_gripper/floating_robotiq_2f_85_gripper.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/floating_robotiq_2f_85_gripper/floating_robotiq_2f_85_gripper.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/floating_robotiq_2f_85_gripper/floating_robotiq_2f_85_gripper.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/floating_robotiq_2f_85_gripper/floating_robotiq_2f_85_gripper.py)
 
 Quality: C (Conditionally stable, can be significantly improved)
 

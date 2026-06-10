@@ -4,7 +4,7 @@
 
 Robot UID: `unitree_h1`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/unitree_h1/h1.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/unitree_h1/h1.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/unitree_h1/h1.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/unitree_h1/h1.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

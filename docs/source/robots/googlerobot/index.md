@@ -4,7 +4,7 @@
 
 Robot UID: `googlerobot`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/googlerobot/googlerobot.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/googlerobot/googlerobot.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/googlerobot/googlerobot.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/googlerobot/googlerobot.py)
 
 Quality: B (Stable, but some values are unrealistic)
 

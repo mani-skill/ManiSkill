@@ -188,7 +188,7 @@ class CartpoleBalanceEnv(CartpoleEnv):
     - Pole is lower than the horizontal plane
     """
 
-    _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/MS-CartpoleBalance-v1_rt.mp4"
+    _sample_video_link = "https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/MS-CartpoleBalance-v1_rt.mp4"
 
     def __init__(self, *args, **kwargs):
         super().__init__(

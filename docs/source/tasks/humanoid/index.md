@@ -84,7 +84,7 @@ Control the humanoid unitree G1 robot to grab an apple with its right arm and pl
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/UnitreeG1PlaceAppleInBowl-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/UnitreeG1PlaceAppleInBowl-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/UnitreeG1PlaceAppleInBowl-v1_rt.mp4" type="video/mp4">
 </video>
 </div>
 
@@ -109,6 +109,6 @@ A G1 humanoid robot must find a box on a table and transport it to the other tab
 
 <div style="display: flex; justify-content: center;">
 <video preload="none" controls="True" width="100%" style="max-width: min(100%, 512px);" poster="../../_static/env_thumbnails/UnitreeG1TransportBox-v1_rt_thumb_first.png">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/UnitreeG1TransportBox-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/UnitreeG1TransportBox-v1_rt.mp4" type="video/mp4">
 </video>
 </div>

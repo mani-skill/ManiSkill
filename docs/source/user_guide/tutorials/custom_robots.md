@@ -46,7 +46,7 @@ To import a URDF/MJCF file, you simply provide a path to the definition file and
 
 #### URDF
 
-To get started, you first need to get a valid URDF file like this one for the [Panda robot](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/assets/robots/panda/panda_v2.urdf)
+To get started, you first need to get a valid URDF file like this one for the [Panda robot](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/assets/robots/panda/panda_v2.urdf)
 
 Then in the agent class add the urdf_path.
 
@@ -62,7 +62,7 @@ Note that there are a number of common issues users may face (often due to incor
 
 ManiSkill supports importing [Mujoco's MJCF format](https://mujoco.readthedocs.io/en/latest/modeling.html) of files to load robots (and other objects), although not all features are supported.
 
-For example code that loads the robot and the scene see https://github.com/haosulab/ManiSkill/blob/main/mani_skill/envs/tasks/control/cartpole.py. Generally you can simply replace the `urdf_path` property of the agent used in URDF based agents with `mjcf_path` property and it will use the MJCF loader instead.
+For example code that loads the robot and the scene see https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/envs/tasks/control/cartpole.py. Generally you can simply replace the `urdf_path` property of the agent used in URDF based agents with `mjcf_path` property and it will use the MJCF loader instead.
 
 
 At the moment, the following are not supported:
@@ -87,7 +87,7 @@ You can also automatically disable all self collisions of the robot by adding `d
 
 #### Testing the loaded URDF/MJCF
 
-We recommend you create a simple test script `test.py` that imports your new robot and leverages the existing demo robot script. While not required it may be helpful to read the [demo robot script](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/examples/demo_robot.py) in order to get more familiarity with using ManiSkill. In `test.py` write
+We recommend you create a simple test script `test.py` that imports your new robot and leverages the existing demo robot script. While not required it may be helpful to read the [demo robot script](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/examples/demo_robot.py) in order to get more familiarity with using ManiSkill. In `test.py` write
 
 ```python
 import my_panda # imports your robot and registers it
@@ -272,7 +272,7 @@ python test.py -r "my_panda" -c "pd_joint_delta_pos" -b "gpu" --random-actions
 ```
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/docs/source/_static/videos/panda_random_actions.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/docs/source/_static/videos/panda_random_actions.mp4" type="video/mp4">
 </video>
 
 This samples random actions to take using the given controller. You may want to tune the controller so that the robot doesn't move too far but also doesn't move too little.
@@ -385,7 +385,7 @@ Moreover, when there are fewer contacts the GPU memory requirements are signific
 
 Depending on the task you can massively increase simulation speed by reducing the `solver_position_iterations` configuration. Generally as a rule of thumb you need `solver_position_iterations` value of 15 or more to accurately simulate robot manipulation (this again depends on a case by case basis). For navigation / locomotion tasks a `solver_position_iterations` value of 4 may suffice.
 
-See the [sim configuration definition](https://github.com/haosulab/ManiSkill/tree/main/mani_skill/utils/structs/types.py) for more details.
+See the [sim configuration definition](https://github.com/mani-skill/ManiSkill/tree/main/mani_skill/utils/structs/types.py) for more details.
 
 #### Condensed Robot Descriptions (WIP)
 
@@ -396,9 +396,9 @@ Simulating robots can be much faster when the number of joints and links are sma
 
 Robots like Fetch have a mobile base, which allows translational movement and rotational movement of the entire robot. In simulation, it is not trivial to simulate the actual physics of wheels moving along a floor and simulating this would be fairly slow. 
 
-Instead, similar to many other simulators a "fake" mobile base is made (that is realistic enough to easily do sim2real transfer in terms of the controller). This is made by modifying a URDF of a robot like Fetch, and adding joints that let the base link translate (prismatic joint) and rotate (revolute joint). See the [Fetch URDF code](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/assets/robots/fetch/fetch.urdf#L3-L40) for the modifications made. 
+Instead, similar to many other simulators a "fake" mobile base is made (that is realistic enough to easily do sim2real transfer in terms of the controller). This is made by modifying a URDF of a robot like Fetch, and adding joints that let the base link translate (prismatic joint) and rotate (revolute joint). See the [Fetch URDF code](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/assets/robots/fetch/fetch.urdf#L3-L40) for the modifications made. 
 
-After modifying the URDF to include dummy links to allow mobile base movement, you then should define a controller (recommended to be separate from the rest of the robot). For the Fetch robot we define a separate controller for the robot arm, gripper, body, and the mobile-base via dictionaries in [our codebase here](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/fetch/fetch.py). We recommend using the PDBaseVelControllerConfig as done below which permits control via XY translational movement and Z-axis rotation.
+After modifying the URDF to include dummy links to allow mobile base movement, you then should define a controller (recommended to be separate from the rest of the robot). For the Fetch robot we define a separate controller for the robot arm, gripper, body, and the mobile-base via dictionaries in [our codebase here](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/fetch/fetch.py). We recommend using the PDBaseVelControllerConfig as done below which permits control via XY translational movement and Z-axis rotation.
 
 ```python
 class Fetch(BaseAgent):
@@ -456,13 +456,13 @@ Disabling collisions can be a bit confusing but generally anything that has thei
 
 WIP
 
-For now see the implementation of [Allegro hand with touch sensors](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/allegro_hand/allegro_touch.py)
+For now see the implementation of [Allegro hand with touch sensors](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/allegro_hand/allegro_touch.py)
 
 ### Quadrupeds / Legged motion
 
 For fast simulation of quadrupeds a few tricks are generally used. We will use the ANYmal-C robot as a case study. 
 
-First is the use of simplified collision meshes. The URDF used by ManiSkill is [this one](https://github.com/haosulab/ManiSkill-ANYmalC/blob/main/urdf/anymal.urdf) and the original URDF is saved [here](https://github.com/haosulab/ManiSkill-ANYmalC/blob/main/urdf/anymal_original.urdf). You will notice that the anymal.urdf file has noticeably less collisions defined and in fact the collision mesh compared to the visual mesh looks like this:
+First is the use of simplified collision meshes. The URDF used by ManiSkill is [this one](https://github.com/mani-skill/ManiSkill-ANYmalC/blob/main/urdf/anymal.urdf) and the original URDF is saved [here](https://github.com/mani-skill/ManiSkill-ANYmalC/blob/main/urdf/anymal_original.urdf). You will notice that the anymal.urdf file has noticeably less collisions defined and in fact the collision mesh compared to the visual mesh looks like this:
 
 :::{figure} images/anymal-visual-collision.png
 :::

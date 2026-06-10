@@ -32,7 +32,7 @@ Using the D'Claw robot, rotate a [ROBEL valve](https://sites.google.com/view/rob
 :::
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/RotateValveLevel1-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/RotateValveLevel1-v1_rt.mp4" type="video/mp4">
 </video>
 
 
@@ -62,7 +62,7 @@ WIP
 :::
 
 <video preload="auto" controls="True" width="100%">
-<source src="https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/RotateSingleObjectInHandLevel3-v1_rt.mp4" type="video/mp4">
+<source src="https://github.com/mani-skill/ManiSkill/raw/main/figures/environment_demos/RotateSingleObjectInHandLevel3-v1_rt.mp4" type="video/mp4">
 </video>
 
 ### TriFingerRotateCubeLevel0-v1

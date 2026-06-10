@@ -4,7 +4,7 @@
 
 Robot UID: `trifingerpro`
 
-Agent Class Code: [https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/trifingerpro/trifingerpro.py](https://github.com/haosulab/ManiSkill/blob/main/mani_skill/agents/robots/trifingerpro/trifingerpro.py)
+Agent Class Code: [https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/trifingerpro/trifingerpro.py](https://github.com/mani-skill/ManiSkill/blob/main/mani_skill/agents/robots/trifingerpro/trifingerpro.py)
 
 Quality: B (Stable, but some values are unrealistic)
 
