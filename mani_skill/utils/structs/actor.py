@@ -175,29 +175,16 @@ class Actor(PhysxRigidDynamicComponentStruct[sapien.Entity]):
 
     def hide_visual(self):
         """
-        Hides this actor from view. In CPU simulation the visual body is simply set to visibility 0
-
-        For GPU simulation, currently this is implemented by moving the actor very far away as visiblity cannot be changed on the fly.
-        As a result we do not permit hiding and showing visuals of objects with collision shapes as this affects the actual simulation.
-        Note that this operation can also be fairly slow as we need to run px.gpu_apply_rigid_dynamic_data and px.gpu_fetch_rigid_dynamic_data.
+        Hides this actor from view. Simply set to visibility 0.
         """
         assert not self.has_collision_shapes
         if self.hidden:
             return
-        if self.scene.gpu_sim_enabled:
-            self.before_hide_pose = self.pose.raw_pose.clone()
-
-            temp_pose = self.pose.raw_pose
-            temp_pose[..., :3] += 99999
-            self.pose = temp_pose
-            self.px.gpu_apply_rigid_dynamic_data()
-            self.px.gpu_fetch_rigid_dynamic_data()
-        else:
-            for obj in self._objs:
-                obj.find_component_by_type(
-                    sapien.render.RenderBodyComponent
-                ).visibility = 0
         # set hidden *after* setting/getting so not applied to self.before_hide_pose erroenously
+        for obj in self._objs:
+            obj.find_component_by_type(
+                sapien.render.RenderBodyComponent
+            ).visibility = 0
         self.hidden = True
 
     def show_visual(self):
@@ -206,16 +193,10 @@ class Actor(PhysxRigidDynamicComponentStruct[sapien.Entity]):
             return
         # set hidden *before* setting/getting so not applied to self.before_hide_pose erroenously
         self.hidden = False
-        if self.scene.gpu_sim_enabled:
-            if hasattr(self, "before_hide_pose"):
-                self.pose = self.before_hide_pose
-                self.px.gpu_apply_rigid_dynamic_data()
-                self.px.gpu_fetch_rigid_dynamic_data()
-        else:
-            for obj in self._objs:
-                obj.find_component_by_type(
-                    sapien.render.RenderBodyComponent
-                ).visibility = 1
+        for obj in self._objs:
+            obj.find_component_by_type(
+                sapien.render.RenderBodyComponent
+            ).visibility = 1
 
     def is_static(self, lin_thresh=1e-2, ang_thresh=1e-1):
         """
