@@ -284,10 +284,6 @@ class PDEEPoseControllerConfig(PDEEPosControllerConfig):
     """Lower bound for rotation control. If a single float then X, Y, and Z rotations are bounded by this value. Otherwise can be three floats to specify each dimensions bounds"""
     rot_upper: Union[float, Sequence[float]] = 2 * np.pi
     """Upper bound for rotation control. If a single float then X, Y, and Z rotations are bounded by this value. Otherwise can be three floats to specify each dimensions bounds"""
-    stiffness: Union[float, Sequence[float]] = None
-    damping: Union[float, Sequence[float]] = None
-    force_limit: Union[float, Sequence[float]] = 1e10
-    friction: Union[float, Sequence[float]] = 0.0
 
     frame: Literal[
         "body_translation:root_aligned_body_rotation",
