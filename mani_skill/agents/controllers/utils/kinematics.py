@@ -14,7 +14,7 @@ try:
     import pytorch_kinematics as pk
 except ImportError:
     raise ImportError(
-        "pytorch_kinematics_ms not installed. Install with pip install pytorch_kinematics_ms"
+        "pytorch_kinematics not installed. Install with pip install pytorch_kinematics"
     )
 import torch
 from lxml import etree as ET  # pyright: ignore[reportAttributeAccessIssue]
