@@ -93,6 +93,50 @@ class BaseActorBuilder(BaseBuilder, ABC):
         """
         raise NotImplementedError("")
 
+    def add_sphere_collision(
+        self,
+        pose: Pose,
+        radius: float = 1.0,
+        material: Any | Vec3 | None = None,
+        density: float = 1000.0,
+    ) -> "BaseActorBuilder":
+        """
+        Add a sphere collision to the actor.
+
+        Args:
+            pose: The pose of the sphere relative to actor's local frame.
+            radius: The radius of the sphere.
+            material: The material of the sphere. This is dependent on simulator backend used.
+            For SAPIEN this is a `sapien.physx.PhysxMaterial` object.
+            For Newton based backends this is a ShapeCfg object.
+            density: The density of the sphere.
+
+        Returns:
+            The actor builder.
+        """
+        raise NotImplementedError("")
+
+    def add_sphere_visual(
+        self,
+        pose: Pose,
+        radius: float = 1.0,
+        material: Any | Vec3 | None = None,
+    ) -> "BaseActorBuilder":
+        """
+        Add a sphere visual to the actor.
+
+        Args:
+            pose: The pose of the sphere relative to actor's local frame.
+            radius: The radius of the sphere.
+            material: The material of the sphere. This is dependent on simulator backend used.
+            For SAPIEN this is a `sapien.render.RenderMaterial` object.
+            For Newton based backends this is a ShapeCfg object.
+
+        Returns:
+            The actor builder.
+        """
+        raise NotImplementedError("")
+
 
 class ActorBuilder(BaseActorBuilder):
     """Actor builder for building rigid body objects (actors) in a simulation. This
@@ -104,10 +148,55 @@ class ActorBuilder(BaseActorBuilder):
     that track this builder in order to support using different simulators for physics and
     rendering."""
 
+    _sim_builders: dict[str, BaseActorBuilder] = {}
+    """dictionary mapping sim id to the corresponding actor builder for that simulator."""
+
+    def __init__(self):
+        pass
+
     def add_sim(self, sim: BaseSim):
+        """
+        Add a simulation backend that should track this builder. Whenever this actor is built,
+        the simulator backend will include this actor in its state and compile it in the scene.
+
+        Args:
+            sim: The simulation backend to add.
+
+        Returns:
+            The actor builder.
+        """
         self._sims[sim.id] = sim
+        self._sim_builders[sim.id] = sim.create_actor_builder()
         return self
 
     def remove_sim(self, sim: BaseSim):
+        """
+        Remove a simulation backend that is tracking this builder.
+
+        Args:
+            sim: The simulation backend to remove.
+
+        Returns:
+            The actor builder.
+        """
         self._sims.pop(sim.id)
+        return self
+
+    def build(self):
+        pass
+
+    def add_box_collision(
+        self,
+        pose: Pose,
+        half_size: Vec3 = (1.0, 1.0, 1.0),
+        material: Any | Vec3 | None = None,
+        density: float = 1000.0,
+    ) -> "ActorBuilder":
+        for sim in self._sims.values():
+            self._sim_builders[sim.id].add_box_collision(
+                pose=pose,
+                half_size=half_size,
+                material=material,
+                density=density,
+            )
         return self

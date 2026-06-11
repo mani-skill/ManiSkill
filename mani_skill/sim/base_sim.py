@@ -1,8 +1,10 @@
-from dataclasses import dataclass, field
 from abc import ABC, abstractmethod
+from dataclasses import dataclass, field
+
 import torch
-from mani_skill.utils.building.actor_builder import ActorBuilder
-from mani_skill.utils.building.articulation_builder import ArticulationBuilder
+
+from mani_skill.sim.builders.actor import ActorBuilder
+from mani_skill.sim.builders.articulation import ArticulationBuilder
 from mani_skill.utils.structs.pose import Pose
 
 
@@ -24,12 +26,14 @@ class BaseSimConfig:
     """
 
     spacing: float = 5.0
-    """Controls the spacing between parallel environments when simulating on GPU in meters. Increase this value
-    if you expect objects in one parallel environment to impact objects within this spacing distance."""
+    """Controls the spacing between parallel environments when simulating on GPU in meters. Increase
+    this value if you expect objects in one parallel environment to impact objects within
+    this spacing distance."""
     sim_freq: int = 120
     """simulation frequency (Hz)."""
     control_freq: int = 60
-    """control frequency (Hz). Every control step (e.g. env.step) contains (sim_freq / control_freq) physics steps."""
+    """control frequency (Hz). Every control step (e.g. env.step)
+    contains (sim_freq / control_freq) physics steps."""
 
     default_materials_config: DefaultMaterialsConfig = field(
         default_factory=DefaultMaterialsConfig
@@ -53,18 +57,18 @@ class BaseSim(ABC):
     def __init__(self, cfg: BaseSimConfig | None = None):
         self.cfg = cfg or BaseSimConfig()
 
-    ### Code for adding builders to a scene to then be compiled for rendering/physical simulation ###
-    def create_actor_builder(self, builder: ActorBuilder):
+    ### Code for adding builders to a scene for rendering/physics simulation ###
+    def create_actor_builder(self) -> ActorBuilder:
         """
         Creates an ActorBuilder object that can be used to build actors in this scene.
         """
-        return ActorBuilder().set_scene(self)
+        return ActorBuilder().add_sim(self)
 
-    def create_articulation_builder(self, builder: ArticulationBuilder):
+    def create_articulation_builder(self) -> ArticulationBuilder:
         """
         Creates an ArticulationBuilder object that can be used to build articulations in this scene.
         """
-        return ArticulationBuilder().set_scene(self)
+        return ArticulationBuilder().add_sim(self)
 
     ### Code for compiling simulator scene for rendering ###
     @abstractmethod
@@ -75,7 +79,8 @@ class BaseSim(ABC):
 
     ### Rendering code ###
     # TODO (stao): add_camera or call this add_sensor and eventually support other kinds of sensors?
-    # feel like cameras need a lot of special treatment in general... (e.g. mounting, batching+tiling, evals etc.)
+    # feel like cameras need a lot of special treatment in general...
+    # (e.g. mounting, batching+tiling, evals etc.)
     @abstractmethod
     def add_camera(self, pose: Pose):
         """
