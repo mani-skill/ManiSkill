@@ -30,7 +30,6 @@ Note that some tasks have different state observation data provided depending on
 
 control/index
 table_top_gripper/index
-quadruped/index
 humanoid/index
 mobile_manipulation/index
 dextrous/index

@@ -1,9 +1,18 @@
 # Code to generate task documentation automatically
+import urllib.request
+import mani_skill.envs
+from mani_skill.utils.download_demo import DATASET_SOURCES
+from mani_skill.utils.registration import REGISTERED_ENVS
+import os
+import importlib
+import inspect
+from pathlib import Path
+import cv2
+
 TASK_CATEGORIES_TO_INCLUDE = [
     "tabletop",
     "humanoid",
     "mobile_manipulation",
-    "quadruped",
     "control",
     "drawing",
 ]
@@ -34,9 +43,6 @@ These are tasks where a mobile manipulator is used to manipulate objects. This c
 
 For additional tasks, including scene-level mobile manipulation, please check out the [external benchmarks/tasks page](../external/index.md).
 """,
-    "quadruped": """# Quadruped Tasks
-
-These are tasks where a quadruped robot is used for locomotion and/or manipulation. This cateogry primarily uses robots with four legs like the ANYmal or Unitree go robots.""",
     "control": """# Control Tasks
 
 These are classic control tasks where the objective is to control a robot to reach a particular state, similar to the [DM Control suite](https://github.com/deepmind/dm_control) but with GPU parallelized simulation and rendering.""",
@@ -44,16 +50,6 @@ These are classic control tasks where the objective is to control a robot to rea
 
 These are tasks where the robot is controlled to draw a specific shape or pattern.""",
 }
-import urllib.request
-import mani_skill.envs
-from mani_skill.utils.download_demo import DATASET_SOURCES
-from mani_skill.utils.registration import REGISTERED_ENVS
-import os
-import importlib
-import inspect
-from pathlib import Path
-import cv2
-import tempfile
 
 
 def main():
@@ -130,10 +126,13 @@ def main():
         if os.path.exists(
             f"{base_dir}/{GENERATED_TASKS_DOCS_FOLDER}/{category_name}/index.md"
         ):
-            os.remove(f"{base_dir}/{GENERATED_TASKS_DOCS_FOLDER}/{category_name}/index.md")
+            os.remove(
+                f"{base_dir}/{GENERATED_TASKS_DOCS_FOLDER}/{category_name}/index.md"
+            )
         if category in TASK_CATEGORIES_HEADERS:
             with open(
-                f"{base_dir}/{GENERATED_TASKS_DOCS_FOLDER}/{category_name}/index.md", "w"
+                f"{base_dir}/{GENERATED_TASKS_DOCS_FOLDER}/{category_name}/index.md",
+                "w",
             ) as f:
                 f.write(GLOBAL_TASK_HEADER)
                 f.write(TASK_CATEGORIES_HEADERS[category])
@@ -299,7 +298,7 @@ def main():
 
                     # f.write(f"| {env_id} | <div style='display:flex;gap:4px;align-items:center'>{thumbnail} {thumbnail_last}</div> | {dense} | {sparse} |")
                     f.write(
-                        f"\n<tr class=\"row-{'even' if row_idx % 2 == 1 else 'odd'}\">"
+                        f'\n<tr class="row-{"even" if row_idx % 2 == 1 else "odd"}">'
                     )
                     f.write(
                         f'\n<td><p><a href="#{env_id.lower()}">{env_id}</a></p></td>'
@@ -311,7 +310,7 @@ def main():
                     f.write(f"\n<td><p>{sparse}</p></td>")
                     f.write(f"\n<td><p>{demos}</p></td>")
                     f.write(f"\n<td><p>{max_eps_steps}</p></td>")
-                    f.write(f"\n</tr>")
+                    f.write("\n</tr>")
 
             f.write("\n</tbody>")
             f.write("\n</table>")
