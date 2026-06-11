@@ -25,6 +25,7 @@ dependencies = [
     "gitpython>=3.1.50",
     "h5py>=3.16.0",
     "numpy>=2.4.6",
+    "torch>=2.7.0",
     "trimesh>=4.12.2",
     "tyro>=1.0.13",
 ]
@@ -69,4 +70,3 @@ markers = [
     "gpu_sim: marks tests as using the GPU simulation (deselect with '-m \"not gpu_sim\"')",
     "serial",
 ]
-
