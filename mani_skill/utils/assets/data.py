@@ -141,11 +141,6 @@ def initialize_data_sources():
         url="https://github.com/haosulab/ManiSkill-ANYmalC/archive/refs/tags/v0.1.1.zip",
         target_path="robots/anymal_c",
     )
-    DATA_SOURCES["unitree_h1"] = DataSource(
-        source_type="robot",
-        url="https://github.com/haosulab/ManiSkill-UnitreeH1/archive/refs/tags/v0.1.0.zip",
-        target_path="robots/unitree_h1",
-    )
     DATA_SOURCES["unitree_g1"] = DataSource(
         source_type="robot",
         url="https://github.com/haosulab/ManiSkill-UnitreeG1/archive/refs/tags/v0.1.0.zip",
