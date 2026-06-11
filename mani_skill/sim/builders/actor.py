@@ -10,14 +10,16 @@ from mani_skill.utils.structs.types import Vec3
 
 class BaseActorBuilder(BaseBuilder, ABC):
     # TODO (stao): can this re-use for soft body? need to check newton api
-    """Base actor builder for building rigid body objects (actors) in a simulation. Actor builders for each simulator backend should inherit from this class."""
+    """Base actor builder for building rigid body objects (actors) in a simulation.
+    Actor builders for each simulator backend should inherit from this class."""
 
     # NOTE (stao): most sims have a concept of a initial pose
     initial_pose: Pose | None = None
     """The initial pose of the actor when it gets built and spawned into the simulation."""
 
     scene_idxs: list[int] | None = None
-    """The list of scene indices to build this actor in. If None, the actor will be built in all scenes."""
+    """The list of scene indices to build this actor in. If None, the actor will be
+    built in all scenes."""
 
     def set_scene_idxs(self, scene_idxs: list[int]):
         self.scene_idxs = scene_idxs
@@ -55,12 +57,14 @@ class BaseActorBuilder(BaseBuilder, ABC):
 
 
 class ActorBuilder(BaseActorBuilder):
-    """Actor builder for building rigid body objects (actors) in a simulation. This is simulator independent and can be used to build actors across
-    different backends simultaneously to support e.g. rendering in one backend and running physics in another."""
+    """Actor builder for building rigid body objects (actors) in a simulation. This
+    is simulator independent and can be used to build actors across different simulators
+    simultaneously to support e.g. rendering in one simulator and running physics in another."""
 
     _sims: dict[str, BaseSim] = {}
-    """dictionary of sim backends that will be tracking this builder. There can be multiple sims
-    that track this builder in order to support using different sim backends for physics and rendering."""
+    """dictionary of simulators that will be tracking this builder. There can be multiple simulators
+    that track this builder in order to support using different simulators for physics and
+    rendering."""
 
     def add_sim(self, sim: BaseSim):
         self._sims[sim.id] = sim
