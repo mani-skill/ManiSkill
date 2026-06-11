@@ -2,6 +2,10 @@
 
 A guide for migrating code from ManiSkill 3 to ManiSkill 4, in addition to (strong) recommendations of things to be aware of when upgrading to ManiSkill 4, ranging from changes in default values like sim/control frequencies to TODO
 
+## Things that you have to change
+
+## Strong recommendations
+
 - `SimConfig`, `DefaultMaterialsConfig` configs moved from `mani_skill/utils/structs/types.py` to `mani_skill/sim/base_sim.py`. They are now also frozen dataclasses meaning once created, you generally can't edit it (and shouldn't) unless you know what you are doing.
 
 - The default control and simulation frequencies are now set to 60 and 120, matching a more typical ratio used in timekeeping (e.g. 60s per minute) and more typical values used in robotics for control frequencies. Previously they were 20 and 100, which is still a reasonable choice for many tasks when running simulation RL. Default maniskill tasks and baselines will update to be tuned for the 60 120 control/sim frequencies.

@@ -1,5 +1,16 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from abc import ABC
+
+
+@dataclass(frozen=True)
+class DefaultMaterialsConfig:
+    # note these frictions are same as unity
+    static_friction: float = 0.3
+    dynamic_friction: float = 0.3
+    restitution: float = 0
+
+    def dict(self):
+        return {k: v for k, v in dataclass.asdict(self).items()}
 
 
 @dataclass(frozen=True)
@@ -16,16 +27,9 @@ class BaseSimConfig:
     control_freq: int = 60
     """control frequency (Hz). Every control step (e.g. env.step) contains (sim_freq / control_freq) physics steps."""
 
-
-@dataclass(frozen=True)
-class DefaultMaterialsConfig:
-    # note these frictions are same as unity
-    static_friction: float = 0.3
-    dynamic_friction: float = 0.3
-    restitution: float = 0
-
-    def dict(self):
-        return {k: v for k, v in dataclass.asdict(self).items()}
+    default_materials_config: DefaultMaterialsConfig = field(
+        default_factory=DefaultMaterialsConfig
+    )
 
 
 class BaseSim(ABC):
