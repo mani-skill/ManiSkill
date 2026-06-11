@@ -1,13 +1,12 @@
 from mani_skill.utils.structs.pose import Pose
 from mani_skill.sim.builders.base_builder import BaseBuilder
+from abc import abstractmethod, ABC
+from mani_skill.utils.structs.actor import Actor
 
 
-class ActorBuilder(BaseBuilder):
+class ActorBuilder(BaseBuilder, ABC):
     # TODO (stao): can this re-use for soft body? need to check newton api
     """A general actor builder for building rigid body objects (actors) in a simulation."""
-
-    name: str | None = None
-    """The name of the actor once built."""
 
     # NOTE (stao): most sims have a concept of a initial pose
     initial_pose: Pose | None = None
@@ -19,3 +18,15 @@ class ActorBuilder(BaseBuilder):
     def set_scene_idxs(self, scene_idxs: list[int]):
         self.scene_idxs = scene_idxs
         return self
+
+    @abstractmethod
+    def build(self, name: str) -> Actor:
+        """
+        Build the actor.
+
+        Arguments:
+            name: The name of the actor.
+
+        Returns:
+            The built actor.
+        """

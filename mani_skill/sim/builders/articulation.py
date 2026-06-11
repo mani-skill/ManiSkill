@@ -1,8 +1,10 @@
 from mani_skill.utils.structs.pose import Pose
 from mani_skill.sim.builders.base_builder import BaseBuilder
+from mani_skill.utils.structs.articulation import Articulation
+from abc import abstractmethod, ABC
 
 
-class ArticulationBuilder(BaseBuilder):
+class ArticulationBuilder(BaseBuilder, ABC):
     """A general articulation builder for building articulated objects in a simulation."""
 
     initial_pose: Pose | None = None
@@ -14,3 +16,15 @@ class ArticulationBuilder(BaseBuilder):
     def set_scene_idxs(self, scene_idxs: list[int]):
         self.scene_idxs = scene_idxs
         return self
+
+    @abstractmethod
+    def build(self, name: str) -> Articulation:
+        """
+        Build the articulation.
+
+        Arguments:
+            name: The name of the articulation.
+
+        Returns:
+            The built articulation.
+        """
