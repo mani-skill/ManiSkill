@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional, Sequence, Union
+from typing import TYPE_CHECKING
 
 import numpy as np
 import sapien
@@ -39,13 +39,8 @@ class SapienActorBuilder(OriginalSAPIENActorBuilder, BaseActorBuilder):
 
     def set_scene_idxs(
         self,
-        scene_idxs: Optional[
-            Union[list[int], Sequence[int], torch.Tensor, np.ndarray]
-        ] = None,
+        scene_idxs=None,
     ):
-        """
-        Set a list of scene indices to build this object in. Cannot be used in conjunction with scene mask
-        """
         self.scene_idxs = scene_idxs
         return self
 
@@ -272,7 +267,7 @@ class SapienActorBuilder(OriginalSAPIENActorBuilder, BaseActorBuilder):
         self,
         pose: sapien.Pose = sapien.Pose(),
         half_size: list[float] = [5, 5],
-        mat: sapien.render.RenderMaterial = None,
+        mat: sapien.render.RenderMaterial | None = None,
         texture_repeat: list[float] = [1, 1],
     ):
         """Procedurally generateds a repeated 2D texture. Works similarly to https://mujoco.readthedocs.io/en/stable/XMLreference.html#asset-material-texrepeat

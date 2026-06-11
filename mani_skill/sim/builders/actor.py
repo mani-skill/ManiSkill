@@ -21,12 +21,13 @@ class BaseActorBuilder(BaseBuilder, ABC):
     """The list of scene indices to build this actor in. If None, the actor will be
     built in all scenes."""
 
-    def set_scene_idxs(self, scene_idxs: list[int]):
+    def set_scene_idxs(self, scene_idxs: list[int] | None = None):
         """
-        Set the scene indices (parallel environment IDs) to build this actor in.
+        Set the sub-scene indices (parallel environment IDs) to build this actor in.
 
         Args:
-            scene_idxs: The list of scene indices to build this actor in.
+            scene_idxs: The list of scene indices to build this actor in. If None, the
+            actor will be built in all sub-scenes.
 
         Returns:
             The actor builder.
