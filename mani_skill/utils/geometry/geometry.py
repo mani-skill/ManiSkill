@@ -2,7 +2,7 @@ import numpy as np
 import sapien
 import sapien.physx as physx
 import torch
-from scipy.spatial.transform import Rotation
+# from scipy.spatial.transform import Rotation
 
 from mani_skill.utils.geometry.bounding_cylinder import aabc
 

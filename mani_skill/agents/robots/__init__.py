@@ -11,6 +11,6 @@ from .inspire_hand import (
     FloatingInspireHandLeft as FloatingInspireHandLeft,
     FloatingInspireHandRight as FloatingInspireHandRight,
 )
-from .panda import Panda as Panda
+from .panda import Panda as Panda, PandaStick as PandaStick, PandaWristCam as PandaWristCam
 from .so100 import SO100 as SO100
 from .unitree_g1 import UnitreeG1 as UnitreeG1

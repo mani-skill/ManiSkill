@@ -9,7 +9,6 @@ from .control import (
     AntWalk as AntWalk,
     AntRun as AntRun,
 )
-from .dexterity import InsertFlowerEnv as InsertFlowerEnv
 from .digital_twins import SO100GraspCubeEnv as SO100GraspCubeEnv
 from .drawing import (
     DrawTriangleEnv as DrawTriangleEnv,
