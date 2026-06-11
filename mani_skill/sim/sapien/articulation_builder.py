@@ -7,7 +7,7 @@ import sapien
 import sapien.physx as physx
 import torch
 from sapien.wrapper.articulation_builder import (
-    ArticulationBuilder as SapienArticulationBuilder,
+    ArticulationBuilder as OriginalSapienArticulationBuilder,
 )
 from sapien.wrapper.articulation_builder import LinkBuilder
 
@@ -15,12 +15,15 @@ from mani_skill import logger
 from mani_skill.utils import common
 from mani_skill.utils.structs import Articulation, Pose
 from mani_skill.utils.structs.pose import to_sapien_pose
+from mani_skill.sim.builders.articulation import ArticulationBuilder
 
 if TYPE_CHECKING:
     from mani_skill.envs.scene import ManiSkillScene
 
 
-class ArticulationBuilder(SapienArticulationBuilder):
+class SapienArticulationBuilder(OriginalSapienArticulationBuilder, ArticulationBuilder):
+    """Articulation builder for working with SAPIEN"""
+
     scene: ManiSkillScene
     disable_self_collisions: bool = False
 
