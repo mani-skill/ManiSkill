@@ -1,6 +1,67 @@
+[project]
+name = "mani_skill"
+description = "ManiSkill3: A Unified Benchmark for Generalizable Manipulation Skills"
+authors = [
+    { name = "ManiSkill contributors", email = "stonezt2019@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "dacite>=1.9.2",
+    "gitpython>=3.1.50",
+    "h5py>=3.16.0",
+    "numpy>=2.4.6",
+    "torch>=2.7.0",
+    "trimesh>=4.12.2",
+    "tyro>=1.0.13",
+]
+
+[project.optional-dependencies]
+sapien = [
+    "sapien>=3.0.3",
+]
+newton = [
+    "mujoco-warp>=3.9.0.1",
+    "newton>=1.2.1",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.5.1",
+    "isort>=8.0.1",
+    "nvidia-ml-py>=13.610.43",
+    "pre-commit>=4.6.0",
+    "pytest>=9.0.3",
+]
+docs = [
+    "myst-parser>=5.1.0",
+    "pydata-sphinx-theme>=0.18.0",
+    "sphinx>=9.0.4",
+    "sphinx-autobuild>=2025.8.25",
+    "sphinx-copybutton>=0.5.2",
+]
+
+
 [build-system]
-requires = ["setuptools>=62.3.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "mani_skill/__init__.py"
 
 [tool.pytest.ini_options]
 markers = [

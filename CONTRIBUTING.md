@@ -6,34 +6,25 @@ To start contributing, raise an issue at https://github.com/mani-skill/ManiSkill
 
 ## Setup and Installation
 
-We recommend using Python 3.11 to build and develop on ManiSkill, although we currently aim to support versions 3.10 and above. To get started you must set up a [uv](https://docs.astral.sh/uv/) or [conda/mamba](https://mamba.readthedocs.io/en/latest/index.html) environment which can be done as follows
+We recommend using Python 3.13 to build and develop on ManiSkill, although we currently aim to support versions 3.11 and above. To get started you must set up a [uv](https://docs.astral.sh/uv/) environment and install the development dependencies.
 
-```
+```bash
 # using uv
 git clone https://github.com/mani-skill/ManiSkill.git
 cd ManiSkill
-uv venv -p python3.11
-uv pip install -e .[dev] # install ManiSkill locally with testing dependencies
+uv venv --python 3.13
+uv pip install -e ".[dev]"
 ```
 
-```
-# or using conda/mamba
-conda create -n "ms_dev" "python==3.11"
-git clone https://github.com/mani-skill/ManiSkill.git
-cd ManiSkill
-pip install -e .[dev] # install ManiSkill locally with testing dependencies
-```
+Then setup pre-commit with
 
-Then to setup pre-commit, run
-
-```
-pip install pre-commit
+```bash
 pre-commit install
 ```
 
 ## Testing
 
-Testing is currently semi-automated and a WIP. We currently rely on coverage.py and pytest to test ManiSkill.
+Testing is currently semi-automated. We currently rely on coverage.py and pytest to test ManiSkill.
 
 After you make changes, be sure to add any necessary tests to cover any new code in the `tests/` folder and run all the tests with the following command
 
@@ -72,9 +63,3 @@ To upload to the actual pypi repository
 ```
 python -m twine upload dist/*
 ```
-
-## Adding New Tasks
-
-ManiSkill is built to support building your own custom tasks easily. The documentation on how to use the ManiSkill API to do so is here: https://maniskill.readthedocs.io/en/latest/user_guide/tutorials/custom_tasks/index.html
-
-We encourage users to either create their own repositories with their own tasks for others to use, or to submit to this ManiSkill repo to be part of the official, *vetted*, task list. For tasks in this repo, we do a number of checks to ensure they are of high quality and are well documented. For detailed information on how to add new tasks, see https://maniskill.readthedocs.io/en/latest/contributing/tasks.html
