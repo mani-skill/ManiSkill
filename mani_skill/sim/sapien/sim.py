@@ -64,4 +64,5 @@ class SapienSimConfig(BaseSimConfig):
 
 
 class SapienSim(BaseSim):
-    pass
+    id: str = "sapien"
+    """the id of the simulation backend"""
