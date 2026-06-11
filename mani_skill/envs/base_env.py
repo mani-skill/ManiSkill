@@ -195,7 +195,6 @@ class BaseEnv(gym.Env):
         reward_mode: Optional[str] = None,
         control_mode: Optional[str] = None,
         render_mode: Optional[str] = None,
-        shader_dir: Optional[str] = None,
         enable_shadow: bool = False,
         sensor_configs: dict = dict(),
         human_render_camera_configs: dict = dict(),
@@ -213,11 +212,7 @@ class BaseEnv(gym.Env):
         self.num_envs = num_envs
         self.reconfiguration_freq = reconfiguration_freq if reconfiguration_freq is not None else 0
         self._reconfig_counter = 0
-        if shader_dir is not None:
-            logger.warning("shader_dir argument will be deprecated after ManiSkill v3.0.0 official release. Please use sensor_configs/human_render_camera_configs to set shaders.")
-            sensor_configs |= dict(shader_pack=shader_dir)
-            human_render_camera_configs |= dict(shader_pack=shader_dir)
-            viewer_camera_configs |= dict(shader_pack=shader_dir)
+
         self._custom_sensor_configs = sensor_configs
         self._custom_human_render_camera_configs = human_render_camera_configs
         self._custom_viewer_camera_configs = viewer_camera_configs
