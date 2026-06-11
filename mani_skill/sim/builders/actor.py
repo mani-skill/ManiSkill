@@ -22,6 +22,15 @@ class BaseActorBuilder(BaseBuilder, ABC):
     built in all scenes."""
 
     def set_scene_idxs(self, scene_idxs: list[int]):
+        """
+        Set the scene indices (parallel environment IDs) to build this actor in.
+
+        Args:
+            scene_idxs: The list of scene indices to build this actor in.
+
+        Returns:
+            The actor builder.
+        """
         self.scene_idxs = scene_idxs
         return self
 
@@ -30,7 +39,7 @@ class BaseActorBuilder(BaseBuilder, ABC):
         """
         Build the actor.
 
-        Arguments:
+        Args:
             name: The name of the actor.
 
         Returns:
@@ -44,7 +53,22 @@ class BaseActorBuilder(BaseBuilder, ABC):
         half_size: Vec3 = (1.0, 1.0, 1.0),
         material: Any | None = None,
         density: float = 1000.0,
-    ):
+    ) -> "BaseActorBuilder":
+        # TODO (stao): check Newton API here w.r.t concept of material config
+        """
+        Add a box collision to the actor.
+
+        Args:
+            pose: The pose of the box relative to actor's local frame.
+            half_size: The half size of the box (x, y, and z dimensions).
+            material: The material of the box. This is dependent on simulator backend used.
+            For SAPIEN this is a `sapien.physx.PhysxMaterial` object.
+            For Newton based backends this is a ShapeCfg object.
+            density: The density of the box.
+
+        Returns:
+            The actor builder.
+        """
         raise NotImplementedError("")
 
     def add_box_visual(
@@ -52,7 +76,21 @@ class BaseActorBuilder(BaseBuilder, ABC):
         pose: Pose,
         half_size: Vec3 = (1.0, 1.0, 1.0),
         material: Any | Vec3 | None = None,
-    ):
+    ) -> "BaseActorBuilder":
+        # TODO (stao): check Newton API here w.r.t concept of material config
+        """
+        Add a box visual to the actor.
+
+        Args:
+            pose: The pose of the box relative to actor's local frame.
+            half_size: The half size of the box (x, y, and z dimensions).
+            material: The material of the box. This is dependent on simulator backend used.
+            For SAPIEN this is a `sapien.render.RenderMaterial` object.
+            For Newton based backends this is a ShapeCfg object.
+
+        Returns:
+            The actor builder.
+        """
         raise NotImplementedError("")
 
 
