@@ -706,7 +706,7 @@ requires-dist = [
     { name = "newton", marker = "extra == 'newton'", specifier = ">=1.2.1" },
     { name = "numpy", specifier = ">=2.4.6" },
     { name = "sapien", marker = "extra == 'sapien'", specifier = ">=3.0.3" },
-    { name = "torch", specifier = ">=2.7" },
+    { name = "torch", specifier = ">=2.7.0" },
     { name = "trimesh", specifier = ">=4.12.2" },
     { name = "tyro", specifier = ">=1.0.13" },
 ]

@@ -26,3 +26,4 @@ A guide for migrating code from ManiSkill 3 to ManiSkill 4, in addition to (stro
 ### Deprecations
 
 - `ManiSkillScene`, replaced by `NewtonSim` and `SapienSim`
+- `ActorBuilder` functions that add collisions no longer have a `patch_radius` or `min_patch_radius` option. These are physx specific and are only available if you specifically are using SAPIEN/physx backends. `is_trigger` is also no longer an argument, it was never used to begin with.

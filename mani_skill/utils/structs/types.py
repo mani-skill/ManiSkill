@@ -1,11 +1,12 @@
 from dataclasses import asdict, dataclass, field
-from typing import Any, Literal, Sequence, TypeAlias, Union
+from typing import Any, Literal, Sequence, Tuple, TypeAlias, Union
 
 import numpy as np
 import torch
 
 Array: TypeAlias = Union[torch.Tensor, np.ndarray[Any], Sequence]
 Device: TypeAlias = Union[str, torch.device]
+Vec3 = Tuple[float, float, float] | np.ndarray | Sequence[float]
 
 
 @dataclass

@@ -10,16 +10,16 @@ from sapien import ActorBuilder as OriginalSAPIENActorBuilder
 from sapien.wrapper.coacd import do_coacd
 
 from mani_skill import logger
+from mani_skill.sim.builders.actor import BaseActorBuilder
 from mani_skill.utils import common
 from mani_skill.utils.structs.actor import Actor
 from mani_skill.utils.structs.pose import Pose, to_sapien_pose
-from mani_skill.sim.builders.actor import ActorBuilder
 
 if TYPE_CHECKING:
     from mani_skill.envs.scene import ManiSkillScene
 
 
-class SapienActorBuilder(OriginalSAPIENActorBuilder, ActorBuilder):
+class SapienActorBuilder(OriginalSAPIENActorBuilder, BaseActorBuilder):
     """Actor builder for working with SAPIEN"""
 
     scene: ManiSkillScene

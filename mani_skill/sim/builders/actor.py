@@ -1,12 +1,16 @@
-from mani_skill.utils.structs.pose import Pose
+from abc import ABC, abstractmethod
+from typing import Any
+
+from mani_skill.sim.base_sim import BaseSim
 from mani_skill.sim.builders.base_builder import BaseBuilder
-from abc import abstractmethod, ABC
 from mani_skill.utils.structs.actor import Actor
+from mani_skill.utils.structs.pose import Pose
+from mani_skill.utils.structs.types import Vec3
 
 
-class ActorBuilder(BaseBuilder, ABC):
+class BaseActorBuilder(BaseBuilder, ABC):
     # TODO (stao): can this re-use for soft body? need to check newton api
-    """A general actor builder for building rigid body objects (actors) in a simulation."""
+    """Base actor builder for building rigid body objects (actors) in a simulation. Actor builders for each simulator backend should inherit from this class."""
 
     # NOTE (stao): most sims have a concept of a initial pose
     initial_pose: Pose | None = None
@@ -30,3 +34,38 @@ class ActorBuilder(BaseBuilder, ABC):
         Returns:
             The built actor.
         """
+
+    ### Standard primitive building functions, based on Sapien's original ActorBuilder ###
+    def add_box_collision(
+        self,
+        pose: Pose,
+        half_size: Vec3 = (1.0, 1.0, 1.0),
+        material: Any | None = None,
+        density: float = 1000.0,
+    ):
+        raise NotImplementedError("")
+
+    def add_box_visual(
+        self,
+        pose: Pose,
+        half_size: Vec3 = (1.0, 1.0, 1.0),
+        material: Any | Vec3 | None = None,
+    ):
+        raise NotImplementedError("")
+
+
+class ActorBuilder(BaseActorBuilder):
+    """Actor builder for building rigid body objects (actors) in a simulation. This is simulator independent and can be used to build actors across
+    different backends simultaneously to support e.g. rendering in one backend and running physics in another."""
+
+    _sims: dict[str, BaseSim] = {}
+    """dictionary of sim backends that will be tracking this builder. There can be multiple sims
+    that track this builder in order to support using different sim backends for physics and rendering."""
+
+    def add_sim(self, sim: BaseSim):
+        self._sims[sim.id] = sim
+        return self
+
+    def remove_sim(self, sim: BaseSim):
+        self._sims.pop(sim.id)
+        return self
