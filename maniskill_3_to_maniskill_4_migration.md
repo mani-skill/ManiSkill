@@ -2,7 +2,11 @@
 
 A guide for migrating code from ManiSkill 3 to ManiSkill 4, in addition to (strong) recommendations of things to be aware of when upgrading to ManiSkill 4, ranging from changes in default values like sim/control frequencies to TODO
 
-## Things that you have to change
+## Things that you **must** change and be aware of
+
+- There is no guarantee any randomness / RNG in maniskill 3 will return the same expected randomness in maniskill 4.
+
+- State in maniskill 4 now includes joint targets and joint target velocities if available. Previously these were not included, which can sometimes lead to differences when setting state and taking `None` actions.
 
 ## Strong recommendations
 

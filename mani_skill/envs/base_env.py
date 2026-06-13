@@ -43,7 +43,7 @@ from mani_skill.utils.visualization.misc import tile_images
 
 
 class BaseEnv(gym.Env):
-    """Superclass for ManiSkill environments.
+    """The base environment class for all ManiSkill environments.
 
     Args:
         num_envs: number of parallel environments to run. By default this is 1, which means a CPU simulation is used. If greater than 1,
@@ -216,7 +216,7 @@ class BaseEnv(gym.Env):
         self._custom_sensor_configs = sensor_configs
         self._custom_human_render_camera_configs = human_render_camera_configs
         self._custom_viewer_camera_configs = viewer_camera_configs
-        self._parallel_in_single_scene = parallel_in_single_scene
+        self._parallel_in_single_scene = parallel_in_single_scene # NOTE (stao): this is specific to SAPIEN since sapien viewer permits viewing all or just one scene
         self.robot_uids = robot_uids
         if isinstance(robot_uids, tuple) and len(robot_uids) == 1:
             self.robot_uids = robot_uids[0]
