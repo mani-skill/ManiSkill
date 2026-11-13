@@ -14,6 +14,31 @@ if gym.__version__ > "1.0.0":
     IS_GYMNASIUM_1 = True
 
 
+def make_async_vector_env(env_fns, context="forkserver", **kwargs):
+    """Create a gymnasium AsyncVectorEnv for CPU simulation.
+
+    Falls back to pipe-based observation passing (``shared_memory=False``)
+    when the observation space cannot be placed in shared memory.
+    gymnasium < 1.4 passes ``space.dtype.char`` straight to
+    ``multiprocessing.Array`` when allocating shared memory, which only
+    supports the ``array`` module typecodes. Observation spaces with other
+    dtypes therefore raise ``TypeError: this type has no size`` at
+    construction time. This happens e.g. for the ACT rgbd evaluation envs,
+    whose depth images are float16 (see ManiSkill issue #992). Retrying with
+    ``shared_memory=False`` makes the workers send observations through
+    pipes instead, which supports arbitrary dtypes. gymnasium >= 1.4
+    allocates a uint8 buffer for such dtypes, so the first attempt succeeds
+    there and behavior is unchanged.
+    """
+    try:
+        return gym.vector.AsyncVectorEnv(env_fns, context=context, **kwargs)
+    except TypeError as e:
+        if "has no size" not in str(e):
+            raise
+        kwargs["shared_memory"] = False
+        return gym.vector.AsyncVectorEnv(env_fns, context=context, **kwargs)
+
+
 def find_max_episode_steps_value(env):
     """Finds the max episode steps parameter given by user or registered in the environment.
 
