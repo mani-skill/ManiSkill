@@ -55,7 +55,7 @@ def make_eval_envs(
         vector_cls = (
             gym.vector.SyncVectorEnv
             if num_envs == 1
-            else lambda x: gym.vector.AsyncVectorEnv(x, context="forkserver")
+            else lambda x: gym_utils.make_async_vector_env(x)
         )
         env = vector_cls(
             [
