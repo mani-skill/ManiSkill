@@ -35,7 +35,7 @@ class GPUMemoryConfig:
 
 @dataclass
 class SceneConfig:
-    gravity: Union[np.ndarray, list[float]] = field(
+    gravity: Union[np.ndarray, list[float], tuple[float, ...]] = field(
         default_factory=lambda: np.array([0, 0, -9.81])
     )
     bounce_threshold: float = 2.0
@@ -50,6 +50,15 @@ class SceneConfig:
     enable_enhanced_determinism: bool = False
     enable_friction_every_iteration: bool = True
     cpu_workers: int = 0
+
+    def __post_init__(self):
+        # Accept plain sequences (e.g. [0, 0, -9.81] or (0, 0, -9.81) passed
+        # via a sim_config dict) and normalize to an array so downstream code
+        # (e.g. physx.set_scene_config) always receives an np.ndarray.
+        # Lists were fixed in #1306, but tuples were still rejected by the
+        # strict dacite parsing in BaseEnv (see #1302).
+        if not isinstance(self.gravity, np.ndarray):
+            self.gravity = np.array(self.gravity)
 
     def dict(self):
         return {k: v for k, v in asdict(self).items()}
